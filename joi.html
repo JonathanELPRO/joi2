@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Me perdonas?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('gat2.jpg'); /* Reemplaza con tu URL */
+            background-size: cover;
+            color: white;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        button {
+            font-size: 1.5em;
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.1s ease-in-out; /* Ajusta el tiempo de transición */
+        }
+
+        .yes-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .no-btn {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .yes-btn.grow {
+            transform: scale(1.5); /* Ajusta la escala */
+        }
+
+        .image {
+            width: 200px;
+            height: 200px;
+            background-image: url('gat1.jpg'); /* Reemplaza con tu URL */
+            background-size: cover;
+            background-position: center;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¿Me perdonas?</h1>
+        <div class="image"></div>
+        <button class="yes-btn" id="yesBtn">Sí</button>
+        <button class="no-btn" id="noBtn">No</button>
+    </div>
+
+    <script>
+        let yesBtn = document.getElementById('yesBtn');
+        let noBtn = document.getElementById('noBtn');
+        let size = 1;
+
+        noBtn.addEventListener('mouseover', function() {
+            size += 0.5; /* Incrementa la escala más rápidamente */
+            yesBtn.style.transform = `scale(${size})`;
+        });
+
+        yesBtn.addEventListener('click', function() {
+            alert('Sabia que me amabas, cuando nos casamos biabor?');
+        });
+
+        noBtn.addEventListener('click', function() {
+            alert('Reconsideralo de nuevo amorcito bello de mi cora te ama tu noni');
+        });
+    </script>
+</body>
+</html>
